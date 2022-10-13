@@ -14,24 +14,13 @@ clearBtn.addEventListener("click", clearSearch);
 add.addEventListener("click", addTask);
 taskSearch.addEventListener("keyup", filterTasks);
 
-let tasks = [];
-
-function getTaskFromLocalStorage() {
-  let reTasks = JSON.parse(localStorage.getItem("tasks"));
-  if (reTasks == null) {
-    tasks = [];
-  } else {
-    tasks = reTasks;
-  }
-}
+const tasks = JSON.parse(localStorage.getItem("tasks")) !== null ? JSON.parse(localStorage.getItem("tasks")) : [];
 
 function updateLocalStorage() {
-  let taskString = JSON.stringify(tasks);
-  console.log(taskString);
-  localStorage.setItem("tasks", taskString);
+  const newtasks = JSON.stringify(tasks);
+  localStorage.setItem("tasks", newtasks);
 }
 
-getTaskFromLocalStorage();
 render();
 
 function clearSearch() {
@@ -40,7 +29,7 @@ function clearSearch() {
 }
 
 function filterTasks() {
-  var listItem = document.querySelectorAll("li");
+  const listItem = document.querySelectorAll("li");
   let taskName = taskSearch.value.toLowerCase();
   listItem.forEach((item) => {
     let text = item.innerHTML.toLowerCase();
