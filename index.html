@@ -1,14 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="style.css" />
 
-  
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+      rel="stylesheet"
+    />
+
+    <!--Library-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&family=Tajawal:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="main" id="main">
+      <div class="title">
+        <h1>My Tasks</h1>
+      </div>
+
+      <div class="sections">
+        <section class="task-section">
+          <form class="form">
+            <div class="task-content">
+              <label for="task_titel"></label>
+              <input
+                type="text"
+                name="task_titel"
+                id="task-titel"
+                placeholder="Task"
+              />
+
+              <label for="task_assign"></label>
+              <input
+                type="text"
+                name="task_assign"
+                id="task-assign"
+                placeholder="Assign To"
+              />
+            </div>
+
+            <div class="add-btn">
+              <button type="button" id="add">
+                <span class="material-symbols-outlined"> add </span>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="search-section">
+          <div class="search">
+            <label for="task_search"></label>
+            <input
+              type="text"
+              name="task_search"
+              id="task-search"
+              placeholder="search"
+            />
+            <button type="button" class="clear-btn" id="clear-btn">
+              <span class="material-symbols-outlined"> close </span>
+            </button>
+          </div>
+        </section>
+        <section class="browse-section">
+          <ul id="todos"></ul>
+        </section>
+      </div>
+
+      <footer>
+        <p>
+          <span class="material-symbols-sharp"> done_all </span>
+          <span id="done"></span>From<span id="todo"> 10 </span>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

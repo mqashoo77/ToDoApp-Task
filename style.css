@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Tajawal", sans-serif;
+  background-color: #fddcda;
+}
+.main {
+  background: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 5px #00c9a7;
+  position: relative;
+  margin-top: 5vh;
+  box-shadow: 10px 3px 10px #00c9a7;
+  width: 350px;
+  height: auto;
+}
+
+.main .title {
+  text-align: center;
+  color: #00c9a7;
+  padding: 10px;
+}
+.main .sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 10px;
+}
+.task-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  gap: 2%;
+}
+.task-content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.add-btn {
+  width: 23%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-btn button {
+  width: 90%;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+.add-btn button:hover {
+  box-shadow: 0px 3px 5px #00c9a7;
+}
+.task-section::after {
+  margin-top: 10px;
+  content: "";
+  background: #00c9a7;
+  width: 100%;
+  height: 0.5px;
+}
+
+input {
+  border: solid #00c9a7 1px;
+  padding: 0.5em;
+  border-radius: 5px;
+  width: 100%;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #00c9a7;
+  border-radius: 5px;
+}
+
+button {
+  background: #00c9a7;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 5px;
+  color: #c4fcef;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 0;
+}
+
+button[type="submit"]:hover {
+  background: #4b7da8;
+  box-shadow: 0 0 10px rgba(75, 125, 168, 0.5);
+}
+.search-section {
+  width: 100%;
+}
+.search {
+  position: relative;
+  width: 100%;
+}
+.search input {
+  width: 100%;
+}
+
+.clear-btn {
+  background-color: #f7746b;
+
+  width: 50px;
+  height: 30px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  display: inline;
+  border-radius: 0px 5px 5px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.clear-btn:hover {
+  background-color: #f44336;
+  transition: 0.5s;
+}
+.clear-btn span {
+  color: #f0f0f0;
+}
+
+/******************************/
+section .browse-section {
+  display: flex;
+}
+
+.browse-section ul {
+  border-radius: 10px;
+  padding: 10px;
+  list-style: none;
+  position: relative;
+}
+
+.uncompleted-task-list {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  transition: box-shadow 0.2s;
+}
+.completed-task-list {
+  background-color: #00c9a7;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  transition: box-shadow 0.2s;
+}
+ul li:hover {
+  box-shadow: 0px 3px 5px #00c9a7;
+}
+.todo-item {
+  width: 75%;
+}
+
+.task-name {
+  font-size: large;
+}
+
+.task-assignTo {
+  font-size: 10px;
+}
+
+.control {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-btn {
+  display: flex;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  line-height: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0em 0em;
+}
+.action-btn span {
+  width: 25px;
+  height: 25px;
+  color: gray;
+}
+
+.remove-btn span:hover {
+  color: red;
+  transition: 0.5s;
+}
+.complete-btn span:hover {
+  color: #00c9a7;
+  transition: 0.5s;
+}
+.uncomplete-btn span:hover {
+  color: red;
+  transition: 0.5s;
+}
+
+.task-delete-confirm {
+  right: 12px;
+  z-index: 1;
+  background-color: #c4fcef;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+.confirmation-content {
+  text-align: center;
+}
+.confirm-action {
+  display: flex;
+  justify-content: space-between;
+}
+.cancel-btn {
+  height: 20px;
+  color: #f3f3f3;
+  font-size: 10px;
+}
+.confirm-btn {
+  color: #f3f3f3;
+  height: 20px;
+  background-color: red;
+  font-size: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #00c9a7;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
